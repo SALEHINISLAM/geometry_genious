@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Geometry Genius</title>
+    <style>
+        body{
+            background-color: white;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <header class="bg-white container mx-auto pt-2 md:pt-6 lg:pt-12">
+        <nav class=" bg-white">
+            <div class="navbar bg-[#108fd832]">
+                <div class="navbar-start">
+                  <a href="index.html"><span class="font-bold text-5xl text-[#111111]">Interactive</span> <br> <span class="text-[#11111199] text-3xl">Geometry Genius</span></a>
+                </div>
+
+                <div class="navbar-end">
+                  <a class="btn text-white bg-[#1090D8] border-none">Blog</a>
+                </div>
+              </div>
+        </nav>
+    </header>
+    <main>
+        <section class="flex flex-col md:flex-row container mx-auto  mt-3 md:mt-4 lg:mt-6">
+            <div class="flex-1 grid grid-cols-1 gap-3 lg:grid-cols-2 xl:grid-cols-3 space-y-4">
+                <!-- first card start -->
+                <div class="card card-compact  shadow-xl text-black border border-[#1111111A]">
+                    <figure class="p-5">
+                      <img
+                        src="images/triangle.png"
+                        alt="" />
+                    </figure>
+                    <div class="card-body flex flex-col justify-center items-center">
+                      <h2 class="card-title">Triangle</h2>
+                      <p>Area (A) = 0.5 x b x h</p>
+                        <div class="flex flex-row justify-center gap-1">
+                            <input type="number" name="" id="t-base" placeholder="b" class="bg-[#F1F1F1] max-w-24 text-black text-base rounded-sm px-1">
+                            <p>cm</p>
+                            <input type="number" name="" id="t-height" placeholder="h" class="bg-[#F1F1F1] max-w-24 text-black text-base rounded-sm px-1">
+                            <p>cm</p>
+                        </div>
+                      <div class="card-actions w-full">
+                        <button class="btn btn-primary text-white w-full" id="t-btn">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- first card end -->
+                <!-- second card start -->
+                <div class="card card-compact  shadow-xl text-black border border-[#1111111A]">
+                    <figure class="p-5">
+                      <img
+                        src="images/rectangle.png"
+                        alt="" />
+                    </figure>
+                    <div class="card-body flex flex-col justify-center items-center">
+                      <h2 class="card-title">Rectangle</h2>
+                      <p>Area (A) = w x l</p>
+                        <div class="flex flex-row justify-center gap-1">
+                            <input type="number" name="" id="rec-width" placeholder="w" class="bg-[#F1F1F1] max-w-24 text-black text-base rounded-sm px-1">
+                            <p>cm</p>
+                            <input type="number" name="" id="rec-length" placeholder="l" class="bg-[#F1F1F1] max-w-24 text-black text-base rounded-sm px-1">
+                            <p>cm</p>
+                        </div>
+                      <div class="card-actions w-full">
+                        <button class="btn btn-primary text-white w-full" id="rec-btn">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- second card end -->
+                <!-- third card start -->
+                <div class="card card-compact  shadow-xl text-black border border-[#1111111A]">
+                    <figure class="p-5">
+                      <img
+                        src="images/parallelogram.png"
+                        alt="" />
+                    </figure>
+                    <div class="card-body flex flex-col justify-center items-center">
+                      <h2 class="card-title">Parallelogram</h2>
+                      <p>Area (A) = b x h</p>
+                        <div class="flex flex-row justify-center gap-1">
+                            <input type="number" name="" id="para-base" placeholder="b" class="bg-[#F1F1F1] max-w-24 text-black text-base rounded-sm px-1">
+                            <p>cm</p>
+                            <input type="number" name="" id="para-height" placeholder="h" class="bg-[#F1F1F1] max-w-24 text-black text-base rounded-sm px-1">
+                            <p>cm</p>
+                        </div>
+                      <div class="card-actions w-full">
+                        <button class="btn btn-primary text-white w-full" id="para-btn">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- third card end -->
+                <!-- fourth card start -->
+                <div class="card card-compact  shadow-xl text-black border border-[#1111111A]">
+                    <figure class="p-5">
+                      <img
+                        src="images/rhombus.png"
+                        alt="" />
+                    </figure>
+                    <div class="card-body flex flex-col justify-center items-center">
+                      <h2 class="card-title">Rhombus</h2>
+                      <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                        <div class="flex flex-row justify-center gap-1">
+                            <input type="number" name="" id="rhombus-dia1" placeholder="d1" class="bg-[#F1F1F1] max-w-24 text-black text-base rounded-sm px-1">
+                            <p>cm</p>
+                            <input type="number" name="" id="rhombus-dia2" placeholder="d2" class="bg-[#F1F1F1] max-w-24 text-black text-base rounded-sm px-1">
+                            <p>cm</p>
+                        </div>
+                      <div class="card-actions w-full">
+                        <button class="btn btn-primary text-white w-full" id="rhombus-btn">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- fourth card end -->
+                <!-- fifth card start -->
+                <div class="card card-compact  shadow-xl text-black border border-[#1111111A]">
+                    <figure class="p-5">
+                      <img
+                        src="images/pentagon.png"
+                        alt="" />
+                    </figure>
+                    <div class="card-body flex flex-col justify-center items-center">
+                      <h2 class="card-title">Pentagon</h2>
+                      <p>Area (A) = 0.5 x p x b</p>
+                        <div class="flex flex-row justify-center gap-1">
+                            <input type="number" name="" id="penta-base" placeholder="p" class="bg-[#F1F1F1] max-w-24 text-black text-base rounded-sm px-1">
+                            <p>cm</p>
+                            <input type="number" name="" id="penta-p" placeholder="b" class="bg-[#F1F1F1] max-w-24 text-black text-base rounded-sm px-1">
+                            <p>cm</p>
+                        </div>
+                      <div class="card-actions w-full">
+                        <button class="btn btn-primary text-white w-full" id="penta-btn">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- fifth card end -->
+                <!-- sixth card start -->
+                <div class="card card-compact  shadow-xl text-black border border-[#1111111A]">
+                    <figure class="p-5">
+                      <img
+                        src="images/ellipse.png"
+                        alt="" />
+                    </figure>
+                    <div class="card-body flex flex-col justify-center items-center">
+                      <h2 class="card-title">Ellips</h2>
+                      <p>Area (A) = &#x3C0; x a x b</p>
+                        <div class="flex flex-row justify-center gap-1">
+                            <input type="number" name="" id="ela" placeholder="a" class="bg-[#F1F1F1] max-w-24 text-black text-base rounded-sm px-1">
+                            <p>cm</p>
+                            <input type="number" name="" id="elb" placeholder="b" class="bg-[#F1F1F1] max-w-24 text-black text-base rounded-sm px-1">
+                            <p>cm</p>
+                        </div>
+                      <div class="card-actions justify-center w-full">
+                        <button class="btn btn-primary text-white w-full" id="el-btn">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- sixth card end -->
+
+
+            </div>
+
+
+            <div class="w-[360px] p-4 flex flex-col">
+                <div class="text-4xl text-black underline">Area Calculation</div>
+                <div class="">
+                    <ol id="area-container" class="p-1 md:p-3 lg:p-4 text-black text-xl">
+
+                    </ol>
+                </div>
+                <button id="clear-btn" class="btn btn-error text-base text-white font-semibold">
+                    Clear
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="js/utilities.js"></script>
+</html>
